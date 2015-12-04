@@ -1,0 +1,9 @@
+<% if @bookmark %>
+  <p><%= @bookmark.name %> <%= @bookmark.url %> <%= @bookmark.genre %></p>
+  <a href="/bookmark/<%= @bookmark.id %>/edit">Edit</a>
+  <form action="/bookmark/<%= @bookmark.id %>/delete" method="post">
+    <button>Delete</button>
+  </form>
+<% else %>
+  <p>bookmark doesn't exist</p>
+<% end %>
