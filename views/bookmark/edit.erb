@@ -1,15 +1,10 @@
-<div class="form_container">
-  <h2>Edit bookmark</h2>
-  <form action="/bookmark/<%= @bookmark.id %>" method="post">
-    <label for="name">Title: </label>
-    <input type="text" name="name" value="<%= @bookmark.name %>" placeholder="<%= @bookmark.name %>">
-    <br>
-    <label for="url">URL: </label>
-    <input type="text" name = "url" value="<%= @bookmark.url %>" placeholder="<%= @bookmark.url %>">
-    <br>
-    <label for="genre">Genre: </label>
-    <input type="text" name="genre" value="<%= @bookmark.genre %>" placeholder="<%= @bookmark.genre %>">
-    <br>
-    <button>Edit Bookmark</button>
-  </form>
-</div>
+<form class='new_form' action="/bookmark/<%= @bookmark.id %>" method="post">
+  <h1>Edit Bookmark</h1>
+  <input type="text" name="name" placeholder="Title" value="<%= @bookmark.name %>">
+  <input type="text" name = "url" placeholder="URL" value="<%= @bookmark.url %>">
+  <input type="text" name="genre" placeholder="Genre" value="<%= @bookmark.genre %>">
+  <button>Edit Bookmark</button>
+</form>
+<form class='new_form' style="margin-top: -25px;" action="/bookmark/<%= @bookmark.id %>/delete" method="post">
+  <button>Delete Bookmark</button>
+</form>

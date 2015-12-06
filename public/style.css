@@ -2,91 +2,134 @@ html, body {
   font-family: helvetica;
   color: rgba(0,0,0,0.87);
   margin: 0;
-  margin-top: 40px;
+  background-color: #e4e4e4;
 }
-
-div.header {
-  height: 80px;
-  width: 100%;
-  background-color: #FFEB3B;
-  position: fixed;
-  top: 0;
+small {
+  font-size: 0.8rem;
+  color: rgba(0,0,0,0.70);
 }
-
-div.header h1 {
-  float: right;
-  margin-right: 10px;
-}
-
-nav {
-  margin-top: 30px;
-  float: left;
-}
-
 a {
   text-decoration: none;
   margin-right: 15px;
 }
 
-a:visited {
-  color: rgba(0,0,0,0.87);
+
+
+div.header {
+  width: 100%;
+  height: 400px;
+  background-image: url(/HeaderImage.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+.header form {
+  margin: auto;
+  padding: 0px;
+}
+.header input {
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(255,255,255,0.8);
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  color: rgba(255,255,255,0.8);
+}
+.header button {
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(255,255,255,0.8);
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  left: -2px;
+  top: 12px;
+}
+.header button img {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+.header h1 {
+  font-size: 2.2em;
+  color: rgba(255,255,255,0.8);
+  position: absolute;
+  left: 20px;
+  top: 320px;
+}
+.header a {
+  color: rgba(255,255,255,0.8);
+}
+.header a:visited {
+  color: rgba(255,255,255,0.8);
+}
+.header a:hover {
+  color: rgba(255,255,255,1);
+  text-decoration: none;
 }
 
-a:hover {
+
+
+div.card {
+  display: flex;
+  margin: 10px;
+}
+.card img {
+  height: 90px;
+  width: 90px;
+}
+
+div.cardinfo {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.cardinfo h2 {
+  margin: auto 0;
+}
+.cardinfo img {
+  height: 1em;
+  width: 1em;
+}
+.cardinfo img:hover {
+  background-color: rgba(255, 168, 0, 0.2);
+}
+.cardinfo a {
+  margin: auto 0;
+  color: #3F51B5;
+}
+.cardinfo a:visited {
+  color: #3F51B5;
+}
+.cardinfo a:hover {
   text-decoration: underline;
 }
 
-div.bookmark_container {
-  padding: 15px;
-}
 
-div.bookmark {
-  background-color: #FFF9C4;
-  display: table-cell;
-  padding-bottom: 5px;
-  float: left;
-  margin: 15px;
-}
 
-div.bookmark * {
-  display: block;
+form.new_form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 25px auto;
 }
-
-div.bookmark a {
-  color: #3F51B5;
+form.new_form button {
+  background-color: rgba(255, 168, 0, 0.6);
+  border: 2px solid rgba(255, 168, 0, 1);
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.2em;
+  height: 40px;
+  margin-top: 4px;
 }
-
-div.bookmark img{
-  height: 12px;
-  width: 12px;
-  float: right;
+form.new_form button:hover {
+  background-color: rgba(255, 168, 0, 1);
+  border: 2px solid rgba(255, 168, 0, 0.6);
 }
-
-small {
-  font-size: 0.8rem;
-  color: rgba(0,0,0,0.70);
-}
-
-div.form_container {
-  display: table;
-  margin: 80px auto;
-}
-
-button {
-  margin-left: 106px;
-}
-
-div.bookmark button {
-  float: right;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: 0;
-}
-
-label {
-  float: left;
-  text-align: right;
-  margin-right: 15px;
-  width: 50px;
+form.new_form input {
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 4px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
 }

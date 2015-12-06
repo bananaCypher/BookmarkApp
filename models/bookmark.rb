@@ -15,8 +15,9 @@ class Bookmark
     run_sql(sql).map { |values| self.new(values) }.first
   end
 
-  def self.all_grouped_by(grouping)
-    sql = "SELECT id, name, url, genre FROM #{TABLENAME} ORDER BY #{grouping} ASC"
+  def self.search(term)
+    term = sql_string("%#{term}%")
+    sql = "SELECT id, name, url, genre FROM #{TABLENAME} WHERE name ILIKE #{term} OR genre ILIKE #{term}"
     run_sql(sql).map { |values| self.new(values) }
   end
 
@@ -63,7 +64,7 @@ class Bookmark
     self.class.run_sql(sql)
   end
 
-  def sql_string(value)
+  def self.sql_string(value)
     "'#{value.to_s.gsub("'", "''")}'"
   end
 end

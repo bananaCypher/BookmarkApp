@@ -30,7 +30,6 @@ post '/bookmark/:id' do
   bookmark.name = params['name']
   bookmark.url = params['url']
   bookmark.genre = params['genre']
-
   bookmark.save
 
   redirect to('/bookmark')
@@ -42,7 +41,7 @@ post '/bookmark/:id/delete' do
   redirect to('/bookmark')
 end
 
-get '/bookmark/order_by/:group' do
-  @bookmarks = Bookmark.all_grouped_by(params['group'])
+get '/bookmark/search/' do
+  @bookmarks = Bookmark.search(params['search'])
   erb :'bookmark/index'
 end

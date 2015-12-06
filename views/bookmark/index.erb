@@ -1,14 +1,9 @@
-<div class='bookmark_container'>
-  <% for bookmark in @bookmarks %>
-    <div class='bookmark'>
-      <h3>
-        <a href='/bookmark/<%= bookmark.id %>/edit'><img src="/edit.png"></a>
-        <form action="/bookmark/<%= bookmark.id %>/delete" method="post">
-          <button><img src="/delete.png"></button>
-        </form>
-        <%= bookmark.name %><small><%= bookmark.genre %></small>
-      </h3>
+<% for bookmark in @bookmarks %>
+  <div class="card">
+    <img src="/GlobeIcon.png">
+    <div class="cardinfo">
+      <h2><%= bookmark.name %> - <%= bookmark.genre %> <a href='/bookmark/<%= bookmark.id %>/edit'><img src="/edit.png"></a></h2>
       <a href='<%= bookmark.url %>'><%= bookmark.url %></a>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>

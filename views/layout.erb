@@ -5,14 +5,11 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-  <div class='header'>
-    <nav>
-      <ul>
-        <a href="/bookmark">All Bookmarks</a>
-        <a href="/bookmark/new">New Bookmark</a>
-      </ul>
-    </nav>
-    <h1>Bookmark App</h1>
+  <div class="header">
+    <form action="/bookmark/search/" method="get">
+      <input type="text" name="search" placeholder="Search..."><button><img src="/SearchIcon.png"></button>
+    </form>
+    <h1><a href="/bookmark">Bookmarker</a><small><a href="/bookmark/new">new bookmark</a></small></h1>
   </div>
   <%= yield %>
 </body>
