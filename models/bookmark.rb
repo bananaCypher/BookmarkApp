@@ -33,9 +33,9 @@ class Bookmark
 
   def save
     id = @id.to_i
-    name = sql_string(@name)
-    url = sql_string(@url)
-    genre = sql_string(@genre)
+    name = self.class.sql_string(@name)
+    url = self.class.sql_string(@url)
+    genre = self.class.sql_string(@genre)
 
     if @id && self.class.find(id)
       sql = "UPDATE #{TABLENAME} SET (name, url, genre) = (#{name}, #{url}, #{genre}) WHERE id = #{id}"
